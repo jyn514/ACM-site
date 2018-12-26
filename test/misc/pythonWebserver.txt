@@ -1,0 +1,3 @@
+Note: Python has a built-in webserver. Perfect for Testing!
+
+python -m http.server 8000

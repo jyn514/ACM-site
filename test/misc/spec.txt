@@ -1,0 +1,16 @@
+Specifications for the Web Template:
+================================================================================
+Style files are split by purpose:
+  main.css - All Main CSS, including Headers, Footers and Basic Element Styling
+  form.css - All styling pertaining directly to forms
+  landing.css - All Styling Modifications Specific to Landing Pages, but also 
+    includes
+  
+  *This can be changed later, if needed.
+  
+There are a few template files as well to help split up the things to write:
+  template.html - The Main Template, including Header and Footer as well as
+    Site Colors
+  template_formTest.html - Testing Forms, and using forms.css
+  landing_template.html - Tests all Elements and Modifications that would be
+    present on a Landing Page.

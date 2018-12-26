@@ -1,0 +1,23 @@
+This is a list of things to look into later:
+============================================
+Clean up CSS Files. 
+  Remove Unnecessary Styling Commands, and consolidate CSS files into one file.
+Check spacing and size in Footer Links
+Having a Dropdown Menu on the Last Menu element could create a situation where the menu does not have enough space, and it will appear squished on smaller screens.
+Work on Spoiler/blur functionality for Images.
+Redesign how Computer code is displayed in the <pre> tag. Make a seperate class for it.
+Do something for <code>?
+Style <meter>?
+Style <progress>?
+Style <aside>?
+Style <summary>
+style <q>?
+style <blockquote>
+Style <abbr>
+Style <kbd>
+Style <samp>
+Style <ui> and <ol> and <dt>
+Style <iframe>
+Fix Visited Link Style for Footer Colored Links, right now it turns white
+Make all Title Text Sizes Relative to the Screen
+Consider using Open Sans for the Text

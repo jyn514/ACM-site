@@ -1,0 +1,265 @@
+<!Doctype html>
+<html>
+  <head>
+    <title> This is a Template </title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/content.css">
+    <link rel="stylesheet" type="text/css" href="style/cards.css">
+    <link rel="stylesheet" type="text/css" href="style/article.css">
+  </head>
+  <body>
+    <!-- This is the Header of the Page -->
+    <header>
+      <div id="title">
+        <h1><span class="color0">Grade</span><span class="color1">Forge</span></h1>
+      </div>
+      <div id="menu">
+        <ul>
+          <!-- For Dropdown Menus: the <li> element must be in class "dropdown" -->
+          <li class="dropdown">
+            <a href="https://google.com"> Home </a>
+            <div class="dropdownContent">
+              <p> Hello World </p>
+              <p> Hello World </p>
+              <p> This should be a Link! </p>
+              <a href="#"> Link! </a>
+            </div>
+          </li>
+          <li><span class="current"> Help </span></li>
+          <li><span> About Us </span></li>
+          <li class="dropdown">
+            <span> ... </span>
+            <div class="dropdownContent">
+              <p> Hello World </p>
+              <p> Hello World </p>
+              <p> This should be a Link! </p>
+              <a href="#"> Link123! </a>
+            </div>
+          </li>
+          <li><span> Lorem </span></li>
+          <li><span> ipsum </span></li>
+          <li><a href="https://duckduckgo.com"> Test Link </a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <!-- this is the content of the page -->
+    <main>
+      <div class="container">
+        <h1> Form Test </h1>
+        <p> This has every type of form-related element for testing with CSS </p>
+        <!-- Action specifies where the browser will navigate to after submitting -->
+        <!-- Note, with method get, the variables are visible in the address field in the web browser -->
+        <form action="results.html" target="_blank" method="get">
+          <fieldset>
+            <legend> This is a Test </legend>
+            Label Here:
+            <!-- Text Fields -->
+            <input type="text" name="test1">
+            <input type="text" name="test2"><br>
+            <!-- Radio Buttons -->
+            <input type="radio" name="grp1" value="rad1"> Radio1 <br>
+            <input type="radio" name="grp1" value="rad2"> Radio2 <br>
+            <input type="radio" name="grp1" value="rad3"> Radio3 <br>
+            <!-- Option Box -->
+            <select name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab" selected>Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select><br>
+            <!-- Multiple Select -->
+            <select name="cars2" size="3" multiple>
+              <option value="volvo">Volvo</option>
+              <option value="saab" selected>Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+            <br>
+            <textarea name="msg" rows="10" cols="40">
+              This is a test.
+            </textarea>
+            <br>
+            <input type="button" value="hi">
+            <br>
+            <button type="button"> Button </button>
+            <br>
+            <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+            <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+            <input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br>
+            <!-- Color Selector -->
+            Select your favorite color: <input type="color" name="favcolor" value="#ff0000">
+            <br>
+            Birthday: <input type="date" name="bday">
+            <br>
+            Birthday (date and time): <input type="datetime-local" name="bdaytime">
+            <br>
+            <!-- Checks for a valid email address, but probably shouldn't be relied on -->
+            E-mail: <input type="email" name="emailaddress">
+            <br>
+            Select a file: <input type="file" name="myFile">
+            <br>
+            <!-- This is hidden and not shown to the end user. Useful for keeping track of form ids, but they are not secure, as they can be edited. -->
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <!-- Will submit the x and y coordinates of a click -->
+            <input type="image" src="img_submit.gif" alt="Submit">
+            <br>
+            Birthday (month and year): <input type="month" name="bdaymonth">
+            <br>
+            Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5">
+            <br>
+            Password: <input type="password" name="pwd">
+            <br>
+            <input type="range" name="points" min="0" max="10">
+            <br>
+            <input type="reset">
+            <br>
+            Search Google: <input type="search" name="q">
+            <br>
+            Telephone: <input type="tel" name="usrtel">
+            <br>
+            Select a time: <input type="time" name="usr_time">
+            <br>
+            Add your homepage: <input type="url" name="homepage">
+            <br>
+            Select a week: <input type="week" name="week_year">
+            <br>
+            <h2> Other Tags! </h2>
+            <label> This should be a label for a button </label><button type="button">Click Me!</button>
+            <br>
+            <label> This is disabled </label>
+            <input type="text" disabled="true">
+            <br>
+            <select>
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
+            <br>
+            <input list="browsers">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+            <br>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+          </fieldset>
+        </form>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+          <input type="range" id="a" value="50">100
+          +<input type="number" id="b" value="50">
+          =<output name="x" for="a b"></output>
+        </form>
+        <section id="infoform">
+          <form action="results.html" target="_blank" method="get" class="info">
+            <div class="head">
+              <h1> This is an Info Form </h1>
+            </div>
+            <div class="body">
+              <p> Give us some feedback! We'd love to hear from you! </p>
+              <!-- Note: Fieldset is meant for a PART of a form, not the whole
+              form -->
+              <fieldset class="container required">
+                <label> Name </label><br>
+                <input type="text"><br>
+              </fieldset>
+              <fieldset class="container required">
+                <label> Email </label><br>
+                <input type="email"><br>
+              </fieldset>
+              <fieldset class="container">
+                <label> What Best Describes You? </label><br>
+                <input type="radio" name="type" value="student"> Student <br>
+                <input type="radio" name="type" value="instructor"> Instructor <br>
+                <input type="radio" name="type" value="admin"> Administration <br>
+                <input type="radio" name="type" value="other"> Other <br>
+              </fieldset>
+              <fieldset>
+                <label> Comments </label><br>
+                <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
+              </fieldset>
+              <hr>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    
+    <!-- this is the footer of the page -->
+    <footer>
+      <div id="footer-top">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <dl>
+                  <dt class="color0"><a href="https://cse.sc.edu"> Section Title </a></dt>
+                  <dd><a href="https://sc.edu"> link </a></dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                </dl>
+              </td>
+              <td>
+                <dl>
+                  <dt class="color1"><a href="https://cse.sc.edu"> Section Title </a></dt>
+                  <dd><a href="https://sc.edu"> link </a></dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                </dl>
+              </td>
+              <td>
+                <dl>
+                  <dt class="color2"><a href="https://cse.sc.edu"> Section Title </a></dt>
+                  <dd><a href="https://sc.edu"> link </a></dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                </dl>
+              </td>
+              <td>
+                <dl>
+                  <dt class="color3"><a href="https://cse.sc.edu"> Section Title </a></dt>
+                  <dd><a href="https://sc.edu"> link </a></dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                  <dd> link </dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="footer-bottom">
+        <table>
+          <tr>
+            <td> Template Test </td>
+            <td> 2018 - GradeForge </td>
+            <td> Other... </td>
+          </tr>
+        </table>
+      </div>
+    </footer>
+  </body>
+</html>

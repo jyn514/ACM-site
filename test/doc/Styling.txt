@@ -1,0 +1,34 @@
+Information on using this styling template:
+
+This styling system is designed to be relatively hands-off, where all needed styles should be already included in the .css files.
+There are a few .css files, split up by main purpose:
+  main.css: Contains important styling rules pertainent to the entire website
+  header.css: Contains all styling pertaining to the header
+  content.css: Everything for regular content in articles and whatnot
+  footer.css: Everything for the Footer Section
+  cards.css: Subset of Content, everything for the Flashcard and Titlecard Stylings
+  form.css: Everything for using Forms
+  articles.css: Everything for displaying Article Snippets, as would show up in the Table of Contents
+  
+Mobile Phone (or portrait screen shape) should be inline with the CSS Stylings. There will be no specific mobile site.
+
+For Headers:
+  There are 3 available styles:
+    Two-lined Topbar
+    One-lined Topbar
+    Sidebar
+  Every item in the links menu should ALWAYS be surrounded by something:
+    <li><span/a/...></...></li>
+For Flashcards:
+  There are a few styles:
+    White background
+    Gradient Backgrounds
+    Image Background (specify Image in the HTML file)
+  There are containers:
+    Regular Content Container
+    Left/Right Container
+For Content:
+  It is recommended to use the Content Container to make content more readable
+  If the header is a sidebar, be sure to set the class to "sidebar" to make the margins correct.
+For Footers:
+  If the Header is displayed as a sidebar, then there should be no footer, or a very minimal one that also accounts for the sidebar

@@ -1,0 +1,425 @@
+/*  Landing Page Styling
+      This page is designed to have a Large slide-like Layout to Display Information
+        Also needs to have light and dark classes
+      This should also have the facilities to provide a layout for articles
+      This page will have a modified Header Format
+
+  (c) Brady O'Leary 2018
+*/
+
+/* Header Modifications - "Clean Header" */
+body > header.oneline {
+  box-shadow: none;
+  margin: 0px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* Make it above the First Flashcard */
+header.oneline.abs {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  margin: 0px;
+}
+
+header.oneline.abs div {
+  position: static;
+}
+
+header.oneline.abs div#title {
+  margin-left: 1em !important;
+}
+
+header.oneline.abs div#menu {
+  margin-right: 1em !important;
+  color: white;
+}
+
+header.oneline.abs ul li .current {
+  background-color: #F0F7D440 !important;
+}
+
+header.oneline.abs ul li a:hover {
+  background-color: #dddddd40 !important;
+}
+
+header.oneline.abs div#menu .dropdown:hover {
+  color: black;
+  background-color: #dddddd40;
+}
+
+header.oneline.abs div#menu .dropdown:hover > a {
+  color: black;
+  background-color: #dddddd40;
+}
+
+header.oneline div#menu .dropdownContent * {
+  color: black !important;
+}
+
+/* END Absolute Positioning */
+
+/* Start Header Light/Dark Stylings */
+
+header.oneline.light div#title h1 span.color0 {
+  color: white !important;
+}
+
+header.oneline.light li > a {
+  border-bottom: 5px solid #eee;
+  color: white !important;
+}
+
+header.oneline.light li :not(a) {
+  color: #ddd !important;
+}
+
+/* END Header Light/Dark Colorings */
+
+/* Title Section of Header */
+header.oneline div#title {
+  text-align: left;
+  font-family: title;
+  font-size: 30px;
+  margin: 0px;
+  padding: 5px 0px;
+  color: black;
+  width: 30%;
+}
+
+header.oneline div#title h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+header.oneline div#title h1 span.color1 {
+  color: #2682A6;
+}
+
+header.oneline div#title h1 span.color0 {
+  color: black;
+}
+
+/* Menu section of Header */
+
+header.oneline div#menu {
+  display: block;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: menu;
+  width: 70%;
+  height: auto;
+  margin: auto;
+}
+
+header.oneline div#menu ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  text-align: center;
+  /* Make Elements Evenly Spaced*/
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Links in the Menu */
+header.oneline li > a {
+  padding: 10px 0px;
+  border-bottom: 5px solid #111;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Menu Elements */
+header.oneline li {
+  float: left;
+  width: 20%; /* [was 20%] If new items added, change this */
+}
+
+header.oneline li :not(a) {
+  display: block;
+  color: gray;
+  padding: 10px 0px;
+}
+
+header.oneline ul li .current {
+  background-color: #F0F7D4;
+  border-bottom: 5px solid #BBE524;
+}
+
+header.oneline ul li a:link {
+  color: black;
+}
+
+header.oneline ul li a:visited {
+  color: black;
+}
+
+header.oneline ul li a:hover {
+  color: black;
+  background-color: #ddd;
+  border-bottom: 5px solid #002C3D;
+}
+
+header.oneline ul li a:active {
+  color: white;
+}
+
+header.oneline div#menu .dropdown:hover {
+  color: black;
+  background-color: #ddd;
+}
+
+header.oneline div#menu .dropdown:hover > a {
+  color: black;
+  background-color: #ddd;
+}
+
+/* END Header Modifications */
+
+/* Start Section-Specific Segments or Flashcards */
+
+section.flashcard {
+  min-height: 100vh;
+  background: rgb(255,35,15);
+  background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+  background-attachment: fixed;
+  color: white; /* Default to Light */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section.flashcard.img {
+  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+section.flashcard div.container {
+  height: 100%;
+}
+
+section.flashcard.img .light {
+  color: white;
+  text-shadow: 0px 5px 5px #333;
+}
+
+section.flashcard.img .dark {
+  color: #333;
+  text-shadow: 0px 5px 5px #eee;
+}
+
+section.flashcard .dark {
+  color: #333;
+  text-shadow: 0px 5px 5px #eee;
+}
+
+section.flashcard h1, section.flashcard h2, section.flashcard h3, section.flashcard h4, section.flashcard h5, section.flashcard h6, section.flashcard p, section.flashcard a {
+  margin: auto;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+}
+
+section.flashcard h1 {
+  font-size: 60px;
+  font-family: title;
+}
+
+section.flashcard p {
+  font-size: 20px;
+  font-family: semibold;
+}
+
+/* Left/Right Container */
+section.flashcard div.lr-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+section.flashcard div.lr-container > div {
+  width: 50%;
+}
+
+section.flashcard div.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* END Flashcards */
+
+/* START TitleCards */
+
+section.titlecard {
+  min-height: 50vh;
+  color: white; /* Default to Light */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+section.titlecard.red-orange {
+  background: rgb(255,81,0);
+  background: linear-gradient(45deg, rgba(255,81,0,1) 0%, rgba(255,35,15,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard.blue-green {
+  background: rgb(187,229,36);
+  background: linear-gradient(45deg, rgba(187,229,36,1) 0%, rgba(38,130,166,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard.grayscale {
+  background: rgb(51,51,68);
+  background: linear-gradient(66deg, rgba(51,51,68,1) 0%, rgba(153,153,170,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard h1, section.titlecard h2, section.titlecard h3, section.titlecard h4, section.titlecard h5, section.titlecard h6, section.titlecard p, section.titlecard a {
+  margin: auto;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+}
+
+section.titlecard h1 {
+  font-size: 60px;
+  font-family: title;
+}
+
+section.titlecard p {
+  font-size: 20px;
+  font-family: semibold;
+}
+
+/* END TitleCards */
+
+/* Start Article Containers */
+
+article {
+  text-align: left;
+  margin: 1em 0px;
+}
+
+article img {
+  height: auto;
+  max-width: 50%;
+  display: block;
+  margin: auto;
+  object-fit: contain;
+}
+
+article h1 {
+  color: #2682A6;
+  font-family: bold;
+  font-size: 25px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+article h1 a:link {
+  color: #2682A6;
+  text-decoration: none;
+}
+
+article h1 a:hover {
+  color: #82c7e3;
+}
+
+article .info {
+  font-family: ultralight;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  color: #333;
+}
+
+article .tag {
+  border-radius: 5px;
+  background-color: #F0F7D4;
+  padding: 2.5px;
+  box-shadow: 0px 3px 7px #777;
+  margin: 0px 5px;
+}
+
+article .tag.green {
+  background-color: #dcf28d;
+}
+
+article .tag.red {
+  background-color: #ff8a80;
+}
+
+article .tag.blue {
+  background-color: #97d1e7;
+}
+
+article .tag.orange {
+  background-color: #fecc81;
+}
+
+article a.tag:link, article a.tag:visited {
+  text-decoration:none;
+  color: black;
+}
+
+article a.tag:hover, article a.tag:active {
+  color: #333;
+  box-shadow: 0px 5px 7px #999;
+}
+
+article .left {
+}
+
+article .right {
+}
+
+article .continue {
+  width: 100%;
+  background-color: #eee;
+  color: black;
+  font-family: ultralight;
+  text-align: center;
+  margin: 5px 0px;
+}
+
+article a:link.continue {
+  color: black;
+  text-decoration: none;
+  display: block;
+  background-color: #ccc;
+}
+
+article a:hover.continue {
+  color: #333;
+  background-color: #eee;
+}
+
+/* END Article Containers */

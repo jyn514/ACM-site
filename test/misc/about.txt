@@ -1,0 +1,5 @@
+This is the static Page template for ACM. It is based off of my most recent web
+template, created in 2018. This has a few differences:
+  1. Sidebar for Navigation on widescreen devices.
+  2. Different Color Scheme
+  3. 

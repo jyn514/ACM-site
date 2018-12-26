@@ -1,0 +1,726 @@
+/*
+  Main Stylesheet for site-wide things
+*/
+
+/* Fonts */
+@font-face {
+  font-family: title;
+  src: url('/font/LeagueMono-ExtraBold.woff2');
+}
+
+@font-face {
+  font-family: menu;
+  src: url('/font/LeagueMono-Regular.woff2');
+}
+
+@font-face {
+  font-family: bold;
+  src: url('/font/LeagueMono-Bold.woff2');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/font/LeagueMono-Light.woff2');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('/font/LeagueMono-Medium.woff2');
+}
+
+@font-face {
+  font-family: semibold;
+  src: url('/font/LeagueMono-SemiBold.woff2');
+}
+
+@font-face {
+  font-family: thin;
+  src: url('/font/LeagueMono-Thin.woff2');
+}
+
+@font-face {
+  font-family: ultralight;
+  src: url('/font/LeagueMono-UltraLight.woff2');
+}
+
+/* HTML Tags */
+
+html {
+  
+}
+
+body {
+  margin: 0px;
+}
+
+/* Header Block: Title and Menu */
+header {
+  box-shadow: 0px 5px 10px #555;
+  margin: 0px 0px 10px 0px;
+  background: rgb(32,32,32);
+  background: radial-gradient(circle, rgba(32,32,32,1) 0%, rgba(17,17,17,1) 100%);
+  color: white;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  width: 20%;
+}
+
+/* Title Section of Header */
+header div#title {
+  height: 25%;
+  text-align: center;
+  font-family: title;
+  font-size: 30rem;
+  margin: 0px;
+  padding: 5px 0px;
+  color: white;
+}
+
+header div#title p {
+  font-family: menu;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+header div#title h1 {
+  font-family: title;
+  padding: 0px;
+  margin: 0px;
+  font-size: 5rem;
+}
+
+header div#title h1 span.color2 {
+  color: #73000a;
+}
+
+header div#title h1 span.color1 {
+  color: #2682A6;
+}
+
+header div#title h1 span.color0 {
+  color: white;
+}
+
+/* Menu section of Header */
+header div#menu ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  text-align: center;
+  /* Make Elements Evenly Spaced*/
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+header div#menu {
+  height: 100%;
+  display: block;
+  /*background-color: #002C3D;*/
+  font-size: 20px;
+  font-family: menu;
+}
+
+/* Links in the Menu */
+header li > a {
+  padding: 10px 0px;
+  /*border-bottom: 5px solid #002C3D;*/
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Menu Elements */
+header li {
+  /*float: left;*/
+  width: 100%; /* [was 20%] If new items added, change this */
+}
+
+header li :not(a) {
+  display: block;
+  color: gray;
+  padding: 10px 0px;
+}
+
+header ul li .current {
+  background-color: #004966;
+  border-bottom: 5px solid #BBE524;
+}
+
+header ul li a:link {
+  color: white;
+}
+
+header ul li a:visited {
+  color: white;
+}
+
+header ul li a:hover {
+  color: white;
+  background-color: #111111;
+  border-bottom: 5px solid #F0F7D4;
+}
+
+header ul li a:active {
+  color: white;
+}
+
+/* Dropdown Hover Menus */
+header div#menu .dropdown {
+  color: blue;
+}
+
+/* Keep Hover Effect Active while the Menu is open */
+header div#menu .dropdown:hover {
+  color: white;
+  background-color: #111111;
+  border-bottom: 0px;
+}
+/* Fix for Link Glitch */
+header div#menu .dropdown:hover > a {
+  color: white;
+  background-color: #111111;
+  border-bottom: 0px;
+}
+
+/* Makes the Drop-down Menu Appear */
+header div#menu .dropdown:hover .dropdownContent {
+  display: block;
+}
+
+header div#menu .dropdownContent {
+  display: none; /*none*/
+  position: absolute;
+  z-index: 1;
+  background-color: #F0F7D4;
+  min-width: 100%; /* Should change if Menu Element # changes */
+  min-height: 15px;
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Selects any Element in the drop-down menu */
+header div#menu .dropdownContent * {
+  margin: 0px;
+  padding: 10px 0px;
+  color: black;
+  font-family: menu;
+  font-size: 15px;
+  display: block;
+  border-bottom: 0px;
+  border-left: 5px solid rgba(0,0,0,0.0);
+}
+
+header div#menu .dropdownContent a {
+  text-decoration: none;
+}
+
+header div#menu .dropdownContent a:hover {
+  background-color: #e2efa9;
+  border-left: 5px solid black;
+  border-bottom: 0px;
+}
+
+/* Content Block */
+main {
+  min-height: 90vh; /* Note: 1vh ~= 1% viewport Height */
+  /*background-color: green;*/
+  margin: 0px 0px;
+  margin-left: 20%;
+  font-family: light;
+}
+
+/* Use this to Center Items */
+main .container {
+  margin: 0% 20%;
+}
+
+main .title {
+  margin: 0px;
+  padding: 0px;
+  font-size: 40px;
+  border-left: 0px;
+  font-family: bold;
+}
+
+/* This is the Navigator Bar */
+main nav {
+  background-color: #111111;
+  color: white;
+  margin: 0px;
+  padding: 5px 0px;
+}
+
+main nav span {
+  font-family: semibold;
+  font-size: 24px;
+  display: block;
+  float: left;
+  padding: 1px 10px 1px 1px;
+}
+
+main nav ul {
+  list-style-type: none;
+  display: inline;
+  margin: 0px;
+}
+
+main nav ul li {
+  padding: 1px 15px 1px 0px;
+  font-family: semibold;
+  color: gray;
+  display: inline-block;
+}
+
+main nav ul li * {
+  margin: 5px 0px;
+  padding: 0px;
+}
+
+/* May change the Link color at some point */
+main nav ul li a:link {
+  color: #BBE524;
+  text-decoration: none;
+  
+}
+
+main nav ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header Decorations */
+main h1 {
+  margin: 10px 0px;
+  font-family: semibold;
+  border-left: 5px solid #333333;
+  padding: 1px 1px 1px 10px;
+}
+
+main h2 {
+  margin: 5px 0px;
+  font-family: semibold;
+  border-left: 5px solid #444444;
+  padding: 1px 1px 1px 10px;
+}
+
+main h3 {
+  margin: 5px 0px;
+  font-family: semibold;
+  border-left: 5px solid #555555;
+  padding: 1px 1px 1px 10px;
+}
+
+main h4 {
+  margin: 5px 0px;
+  font-family: semibold;
+  border-left: 5px solid #666666;
+  padding: 1px 1px 1px 10px;
+}
+
+main h5 {
+  margin: 5px 0px;
+  font-family: semibold;
+  border-left: 5px solid #777777;
+  padding: 1px 1px 1px 10px;
+}
+
+main h6 {
+  margin: 5px 0px;
+  font-family: semibold;
+  border-left: 5px solid #888888;
+  padding: 1px 1px 1px 10px;
+}
+
+main .invert {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+/* END Header Decorations */
+
+main p {
+  margin: 10px 0px;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+
+main img.blur {
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
+}
+
+main figure {
+  margin: 5px 0px;
+  padding: 0px;
+  background-color: #002C3D;
+  color: white;
+}
+
+main figure .figure {
+  color: gray;
+}
+
+main figure figcaption {
+  margin: 0px;
+  padding: 5px 5px 5px 20px;
+  font-family: ultralight;
+  border-left: 5px solid #004966;
+}
+
+main img.noresize {
+  width: auto;
+  height: auto;
+  margin: auto;
+  text-align:center;
+
+}
+
+main img.noresize.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* For Code Displays */
+main pre {
+  margin: 0px 0px 0px 10px;
+  counter-reset: line; /* Counter used for Code */
+  border-left: 1px solid gray;
+  background-color:#eee;
+  border-left: 5px solid #2682A6;
+  margin: 5px 0px;
+  padding: 1em;
+  white-space: pre-wrap;
+  font-family: ultralight;
+  color: #2682A6; /* For anything not in the code */
+}
+
+main pre code {
+  counter-increment: line;
+  word-wrap: break-word;
+  padding: .5em;
+  font-family: light;
+  line-height: 1.5rem;
+  color: black;
+  background-color: transparent;
+}
+
+main pre code:before {
+  content: counter(line);
+  -webkit-user-select: none;
+  border-right: 1px solid #777;
+  color: #777;
+  display: inline-block;
+  padding:0 0.5em;
+  margin-right: .5em;
+}
+/* END Code Display Box */
+
+
+/* Text Sections */
+main div.ts {
+  background-color: white;
+  border-left: 5px solid gray;
+  margin: 5px 0px;
+  padding: 0.5em 0.5em 0.5em 1em; 
+}
+
+main div.ts p {
+  margin: 0px;
+}
+
+main div.ts h1 {
+  border-left: 0px;
+  color: gray;
+}
+
+main div.ts.note {
+  background-color: #F0F7D4;
+  border-color: #BBE524;
+}
+
+main div.ts.warn {
+  background-color: #fff9e6;
+  border-color: #ffc30f;
+}
+
+main div.ts.warn h1 {
+  color: #e6ac00;
+}
+
+main div.ts.err {
+  background-color: #ffe8e6;
+  border-color: #FF230F;
+}
+
+main div.ts.err h1 {
+  color: #FF230F;
+}
+/* END Text Sections */
+
+hr {
+  border-style: solid;
+  border-color: #999;
+  margin: 10px 0px;
+}
+
+/* Table Styling */
+main table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+main table caption {
+  text-align: left;
+  background-color: #555;
+  color: white;
+  font-family: light;
+  padding: 5px;
+  border-left: 5px solid #333;
+}
+
+main table thead {
+  border-left: 5px solid black;
+  color: white;
+}
+
+main table tfoot {
+  border-left: 5px solid #2682A6;
+}
+
+main table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+main table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+main table th {
+  background-color: #002C3D;
+  color: white;
+  padding: 5px;
+  font-family: menu;
+  font-size: 17.5px;
+}
+
+main table td {
+  font-family: light;
+  padding: 5px;
+}
+
+main table tr:hover {
+  background-color: #F0F7D4;
+}
+
+/* END Table Styling */
+
+code {
+  font-family: light;
+  background-color: transparent;
+}
+
+/* Details Tag */
+details {
+  /*border-left: 5px solid black;*/
+  background-color: rgba(0,0,0,1);
+  font-family: semibold;
+}
+
+/* Removes the Twisty Triangle */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  background-color: #eee;
+  color: black;
+}
+
+details[open] {
+  background-color: #eee;
+  color: black;
+}
+
+details[open] > *:not(summary) {
+  font-family: light;
+}
+
+details[open] summary {
+  background-color: black;
+  color: white;
+}
+
+/* END Details Tag */
+
+blockquote {
+  border-left: 5px solid #555555;
+  background-color: #eee;
+  margin: 0px;
+  padding: 1em 1em 1em 3em;
+  font-family: light;
+  font-style: italic;
+}
+
+abbr {
+  border-bottom: 2.5px solid #333;
+}
+
+a:link, a:visited {
+  color: #81a013;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #BBE524;
+  text-decoration: none;
+}
+
+/* Footer Block */
+footer {
+  background-color: #002C3D;
+  box-shadow: 0px -5px 10px #555555;
+  color: gray;
+  margin: 10px 0px 0px 0px;
+}
+
+footer div#footer-top {
+  margin: 0px;
+  padding: 0% 10%;
+  background-color: #00121a;
+}
+
+footer div#footer-top table {
+  width: 100%;
+  text-align: center;
+}
+
+footer div#footer-top table dt {
+  font-family: bold;
+  font-size: 17px;
+  margin: 0px 0px 5px 0px;
+  padding: 1px;
+}
+
+footer div#footer-top table dd {
+  margin: 5px 0px;
+  padding: 1px;
+}
+
+footer div#footer-top table td {
+  font-family: menu;
+  margin: 0px;
+}
+
+footer div#footer-top dl {
+  height: 100%;
+  margin: 15px 0px;
+}
+
+footer div#footer-top dl dd {
+  margin: 0px;
+}
+
+/* Colors for Links */
+
+footer div#footer-top dt.color0 {
+  color: #BBE524;
+}
+
+footer div#footer-top .color0 a:link{
+  color: #BBE524;
+}
+
+footer div#footer-top .color0 a:hover{
+  background-color: #BBE524;
+  color: #111111;
+}
+
+footer div#footer-top dt.color1 {
+  color: #FF230F;
+}
+
+footer div#footer-top .color1 a:link{
+  color: #FF230F;
+}
+
+footer div#footer-top .color1 a:hover{
+  background-color: #FF230F;
+  color: #111111;
+}
+
+footer div#footer-top dt.color2 {
+  color: #2682A6;
+}
+
+footer div#footer-top .color2 a:link{
+  color: #2682A6;
+}
+
+footer div#footer-top .color2 a:hover{
+  background-color: #2682A6;
+  color: #111111;
+}
+
+/* NOTE: Experimental Orange Color */
+footer div#footer-top dt.color3 {
+  color: #fb9902;
+}
+
+footer div#footer-top .color3 a:link{
+  color: #fb9902;
+}
+
+footer div#footer-top .color3 a:hover{
+  background-color: #fb9902;
+  color: #111111;
+}
+/* End Exp. Orange Color */
+
+footer div#footer-top table a:link {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+footer div#footer-top table a:visited {
+  color: white;
+}
+
+
+footer div#footer-top table a:hover {
+  color: #111111;
+  background-color: white;
+}
+
+footer div#footer-top table a:active {
+  color: white;
+}
+
+footer div#footer-bottom {
+  font-family: ultralight;
+  color: white;
+}
+
+footer div#footer-bottom table {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
