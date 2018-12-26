@@ -359,9 +359,19 @@ a.button.garnet {
   color: #eee;
 }
 
+a.button.acm-blue {
+  background-color: #0492d2;
+  color: #eee;
+}
+
 a.button.garnet:hover, a.button.garnet:active {
   background-color: #eee;
   color: #73000a;
+}
+
+a.button.acm-blue:hover, a.button.acm-blue:active {
+  background-color: #eee;
+  color: #0492d2;
 }
 
 a.button:hover, a.button:active {
